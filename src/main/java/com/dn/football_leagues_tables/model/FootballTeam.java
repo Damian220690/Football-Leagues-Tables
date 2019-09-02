@@ -24,6 +24,8 @@ public class FootballTeam {
     @JsonProperty("overall_league_GA")
     private int goalsLost;
 
+    public FootballTeam() {
+    }
 
     public FootballTeam(String name, int leaguePosition, int leaguePoints, int matchesPlayed, int matchesWon, int matchesLost, int drawnMatches, int goalsScored, int goalsLost) {
         this.name = name;
