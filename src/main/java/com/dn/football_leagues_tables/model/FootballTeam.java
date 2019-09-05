@@ -5,6 +5,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class FootballTeam {
+
+    @JsonProperty("league_name")
+    private String leagueName;
     @JsonProperty("team_name")
     private String name;
     @JsonProperty("overall_league_position")
@@ -27,7 +30,8 @@ public class FootballTeam {
     public FootballTeam() {
     }
 
-    public FootballTeam(String name, int leaguePosition, int leaguePoints, int matchesPlayed, int matchesWon, int matchesLost, int drawnMatches, int goalsScored, int goalsLost) {
+    public FootballTeam(String leagueName, String name, int leaguePosition, int leaguePoints, int matchesPlayed, int matchesWon, int matchesLost, int drawnMatches, int goalsScored, int goalsLost) {
+        this.leagueName = leagueName;
         this.name = name;
         this.leaguePosition = leaguePosition;
         this.leaguePoints = leaguePoints;
@@ -38,7 +42,6 @@ public class FootballTeam {
         this.goalsScored = goalsScored;
         this.goalsLost = goalsLost;
     }
-
 
     public String getName() {
         return name;
@@ -110,5 +113,13 @@ public class FootballTeam {
 
     public void setGoalsLost(int goalsLost) {
         this.goalsLost = goalsLost;
+    }
+
+    public String getLeagueName() {
+        return leagueName;
+    }
+
+    public void setLeagueName(String leagueName) {
+        this.leagueName = leagueName;
     }
 }
