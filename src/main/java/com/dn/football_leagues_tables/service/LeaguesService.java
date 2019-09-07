@@ -12,7 +12,7 @@ public class LeaguesService {
     @Autowired
     RestTemplate restTemplate;
 
-    @Value("${api.url}")
+    @Value("${api.standingsUrl}")
     String urlPart;
 
     @Value("${api.key}")
