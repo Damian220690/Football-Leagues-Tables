@@ -24,6 +24,7 @@
             <th scope="col">Against</th>
             <th scope="col">GD</th>
             <th scope="col">Points</th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
@@ -38,6 +39,7 @@
                 <td th:text="${footballTeam.goalsLost}"></td>
                 <td th:text="${footballTeam.goalsScored - footballTeam.goalsLost}"></td>
                 <td th:text="${footballTeam.leaguePoints}"></td>
+                <td><a th:href="@{/europeanLeagues/{leagueId}/teamsDetails/{teamId}(leagueId=${footballTeam.leagueId},teamId=${footballTeam.teamId})}">Team Details</a></td>
             </tr>
         </tbody>
     </table>

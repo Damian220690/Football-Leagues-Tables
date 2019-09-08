@@ -6,6 +6,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class FootballTeam {
 
+    @JsonProperty("country_name")
+    private String countryName;
+    @JsonProperty("team_id")
+    private int teamId;
+    @JsonProperty("league_id")
+    private int leagueId;
     @JsonProperty("league_name")
     private String leagueName;
     @JsonProperty("team_name")
@@ -28,19 +34,6 @@ public class FootballTeam {
     private int goalsLost;
 
     public FootballTeam() {
-    }
-
-    public FootballTeam(String leagueName, String name, int leaguePosition, int leaguePoints, int matchesPlayed, int matchesWon, int matchesLost, int drawnMatches, int goalsScored, int goalsLost) {
-        this.leagueName = leagueName;
-        this.name = name;
-        this.leaguePosition = leaguePosition;
-        this.leaguePoints = leaguePoints;
-        this.matchesPlayed = matchesPlayed;
-        this.matchesWon = matchesWon;
-        this.matchesLost = matchesLost;
-        this.drawnMatches = drawnMatches;
-        this.goalsScored = goalsScored;
-        this.goalsLost = goalsLost;
     }
 
     public String getName() {
@@ -121,5 +114,29 @@ public class FootballTeam {
 
     public void setLeagueName(String leagueName) {
         this.leagueName = leagueName;
+    }
+
+    public String getCountryName() {
+        return countryName;
+    }
+
+    public void setCountryName(String countryName) {
+        this.countryName = countryName;
+    }
+
+    public int getTeamId() {
+        return teamId;
+    }
+
+    public void setTeamId(int teamId) {
+        this.teamId = teamId;
+    }
+
+    public int getLeagueId() {
+        return leagueId;
+    }
+
+    public void setLeagueId(int leagueId) {
+        this.leagueId = leagueId;
     }
 }

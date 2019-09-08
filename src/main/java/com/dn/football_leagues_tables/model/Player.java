@@ -1,19 +1,31 @@
 package com.dn.football_leagues_tables.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Player {
+    @JsonProperty("player_name")
     private String name;
+    @JsonProperty("player_number")
     private int playerNumber;
+    @JsonProperty("player_country")
     private String playerCountry;
+    @JsonProperty("player_type")
     private String playerType;
-    private int playerAge;
+    @JsonProperty("player_age")
+    private String playerAge;
+    @JsonProperty("player_match_played")
     private int matchPlayed;
+    @JsonProperty("player_goals")
     private int playerGoals;
+    @JsonProperty("player_yellow_cards")
     private int playerYellowCards;
+    @JsonProperty("player_red_cards")
     private int playerRedCards;
 
     public Player() {
     }
-
 
     public String getName() {
         return name;
@@ -47,11 +59,11 @@ public class Player {
         this.playerType = playerType;
     }
 
-    public int getPlayerAge() {
+    public String getPlayerAge() {
         return playerAge;
     }
 
-    public void setPlayerAge(int playerAge) {
+    public void setPlayerAge(String playerAge) {
         this.playerAge = playerAge;
     }
 

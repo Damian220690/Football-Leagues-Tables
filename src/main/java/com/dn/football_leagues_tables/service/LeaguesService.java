@@ -18,8 +18,8 @@ public class LeaguesService {
     @Value("${api.key}")
     String key;
 
-    public FootballTeam[] getTeamsFromSpecificLeague(int id){
-        String fullUrlAdress = urlPart + id + key;
+    public FootballTeam[] getTeamsFromSpecificLeague(int leagueId){
+        String fullUrlAdress = urlPart + leagueId + key;
         FootballTeam [] teams = restTemplate.getForObject(fullUrlAdress, FootballTeam[].class);
         return teams;
     }
