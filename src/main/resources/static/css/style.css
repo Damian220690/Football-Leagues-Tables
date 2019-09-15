@@ -1,18 +1,37 @@
+
 #leagueTable{
     text-align: center;
 }
 #leagueHeader{
     text-align: center;
 }
-#teamHeader{
+#teamHeader, #playersHeader, #coachesHeader, #coaches, .list-group-item{
     text-align: center;
+}
+#teamHeader{
+    font-family: 'Ultra', serif;
+}
+#playersHeader{
+    font-family: 'Fugaz One', cursive;
+}
+#coachesHeader{
+    font-family: 'Fugaz One', cursive;
+    font-size: 16px;
 }
 #playersTable{
     text-align: center;
     width:70%;
-    margin-left:15%;
-    margin-right:15%;
+    border-collapse: collapse;
+    font-family: 'PT Serif Caption', serif;
 }
 #teamBadge{
-
+    text-align: center;
+    padding-bottom: 30px;
+}
+#tableDiv{
+    display: flex;
+    justify-content: center;
+}
+#coachesList{
+    font-family: 'PT Serif Caption', serif;
 }

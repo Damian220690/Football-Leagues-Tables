@@ -13,15 +13,18 @@ public class TeamDetails {
     private String teamBadge;
     @JsonProperty("players")
     private Player[] players;
+    @JsonProperty("coaches")
+    private Coach[] coaches;
 
     public TeamDetails() {
     }
 
-    public TeamDetails(int teamId, String teamName, String teamBadge, Player[] players) {
+    public TeamDetails(int teamId, String teamName, String teamBadge, Player[] players, Coach[] coaches) {
         this.teamId = teamId;
         this.teamName = teamName;
         this.teamBadge = teamBadge;
         this.players = players;
+        this.coaches = coaches;
     }
 
     public String getTeamName() {
@@ -54,5 +57,13 @@ public class TeamDetails {
 
     public void setTeamId(int teamId) {
         this.teamId = teamId;
+    }
+
+    public Coach[] getCoaches() {
+        return coaches;
+    }
+
+    public void setCoaches(Coach[] coaches) {
+        this.coaches = coaches;
     }
 }
