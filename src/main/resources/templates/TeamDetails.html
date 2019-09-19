@@ -8,10 +8,12 @@
     <link href="https://fonts.googleapis.com/css?family=Ultra&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fugaz+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Serif+Caption&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="screen" />
     <link rel="stylesheet" th:href="@{/css/style.css}"/>
     <title>Team Details</title>
 </head>
-<body id="main" >
+<body id="mainBody" >
+<div id="mainDiv">
 <div th:object="${teamDetails}">
     <h2 id="teamHeader" th:text="*{teamName}"></h2>
     <div id="teamBadge">
@@ -24,23 +26,25 @@
             <tr>
                 <th style="width:40%">Name</th>
                 <th style="width:40%">Position</th>
+                <th></th>
             </tr>
             </thead>
             <tbody>
             <tr th:each="players : ${teamDetails.players}">
                 <td th:text="${players.name}"></td>
                 <td th:text="${players.playerType}"></td>
+                <td><button><i class="fa fa-plus" aria-hidden="true"></i></button></td>
             </tr>
             </tbody>
         </table>
     </div>
     <p id="coachesHeader" >Coaches:</p>
     <ul id="coachesList" class="list-group" th:each ="coaches : ${teamDetails.coaches}">
-        <li id="coaches" class="list-group-item" th:text="${coaches.name}">
+        <li id="coaches" th:text="${coaches.name}">
         </li>
     </ul>
 </div>
-
+</div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

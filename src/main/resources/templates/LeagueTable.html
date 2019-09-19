@@ -8,7 +8,7 @@
     <link rel="stylesheet" th:href="@{/css/style.css}"/>
     <title>League Table</title>
 </head>
-<body>
+<body th:style="'background:url(' + @{/images/footballPitch.jpg} + ');'">
     <h2 th:text="${leagueTeams[0].leagueName}" id="leagueHeader"></h2>
 <div>
     <table class="table" id="leagueTable">
