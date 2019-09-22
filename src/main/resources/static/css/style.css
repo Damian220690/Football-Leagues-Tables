@@ -23,7 +23,7 @@
     width:70%;
     border-collapse: collapse;
     font-family: 'PT Serif Caption', serif;
-    color: #DE2B15;
+    color: #420f07;
 }
 #playersTable th{
     color: #120323;
@@ -42,4 +42,12 @@
 #mainDiv{
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(22,89,16,1) 45%, rgba(206,255,0,0.7679446778711485) 95%);
+}
+.info{
+    display: none;
+    font-size: 13px;
+}
+.enabledAdditionalInfo{
+    display: inline;
+    font-size: 13px;
 }

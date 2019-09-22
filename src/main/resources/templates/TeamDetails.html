@@ -8,42 +8,66 @@
     <link href="https://fonts.googleapis.com/css?family=Ultra&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fugaz+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Serif+Caption&display=swap" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="screen" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"
+          media="screen"/>
     <link rel="stylesheet" th:href="@{/css/style.css}"/>
     <title>Team Details</title>
 </head>
-<body id="mainBody" >
+<body id="mainBody">
 <div id="mainDiv">
-<div th:object="${teamDetails}">
-    <h2 id="teamHeader" th:text="*{teamName}"></h2>
-    <div id="teamBadge">
-        <img th:src="*{teamBadge}">
+    <div th:object="${teamDetails}">
+        <h2 id="teamHeader" th:text="*{teamName}"></h2>
+        <div id="teamBadge">
+            <img th:src="*{teamBadge}">
+        </div>
+        <h3 id="playersHeader">Team Players: </h3>
+        <div id="tableDiv">
+            <table id="playersTable" class="table">
+                <thead>
+                <tr>
+                    <th style="width:40%">Name</th>
+                    <th style="width:40%">Position</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody th:each="players : ${teamDetails.players}" th:class="${players.name}">
+                    <tr>
+                        <td th:text="${players.name}"></td>
+                        <td th:text="${players.playerType}"></td>
+                        <td>
+                            <button><i class="fa fa-plus" aria-hidden="true"></i></button>
+                        </td>
+                    </tr>
+                        <tr th:class="'info '+ ${players.name}" >
+                            <td colspan="3" th:text="'Player number: ' + ${players.playerNumber}"></td>
+                        </tr>
+                        <tr th:class="'info '+ ${players.name}">
+                            <td colspan="3" th:text="'Country of origin: ' + ${players.playerCountry}"></td>
+                        </tr>
+                        <tr th:class="'info '+ ${players.name}">
+                            <td colspan="3" th:text="'Age: ' + ${players.playerAge}"></td>
+                        </tr>
+                        <tr th:class="'info '+ ${players.name}">
+                            <td colspan="3" th:text="'Matches played: ' + ${players.matchPlayed}"></td>
+                        </tr>
+                        <tr th:class="'info '+ ${players.name}">
+                            <td colspan="3" th:text="'Goals: ' + ${players.playerGoals}"></td>
+                        </tr>
+                        <tr th:class="'info '+ ${players.name}">
+                            <td colspan="3" th:text="'Yellow Cards: ' + ${players.playerYellowCards}"></td>
+                        </tr>
+                        <tr th:class="'info '+ ${players.name}">
+                            <td colspan="3" th:text="'Red Cards: ' + ${players.playerRedCards}"></td>
+                        </tr>
+                </tbody>
+            </table>
+        </div>
+        <p id="coachesHeader">Coaches:</p>
+        <ul id="coachesList" class="list-group" th:each="coaches : ${teamDetails.coaches}">
+            <li id="coaches" th:text="${coaches.name}">
+            </li>
+        </ul>
     </div>
-    <h3 id="playersHeader">Team Players: </h3>
-    <div id="tableDiv">
-        <table id="playersTable" class="table">
-            <thead>
-            <tr>
-                <th style="width:40%">Name</th>
-                <th style="width:40%">Position</th>
-                <th></th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr th:each="players : ${teamDetails.players}">
-                <td th:text="${players.name}"></td>
-                <td th:text="${players.playerType}"></td>
-                <td><button><i class="fa fa-plus" aria-hidden="true"></i></button></td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-    <p id="coachesHeader" >Coaches:</p>
-    <ul id="coachesList" class="list-group" th:each ="coaches : ${teamDetails.coaches}">
-        <li id="coaches" th:text="${coaches.name}">
-        </li>
-    </ul>
-</div>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -54,5 +78,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+<script th:src="@{/javascript/app.js}"></script>
 </body>
 </html>

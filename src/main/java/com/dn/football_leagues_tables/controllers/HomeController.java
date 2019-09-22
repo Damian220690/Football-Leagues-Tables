@@ -31,4 +31,9 @@ public class HomeController {
         model.addAttribute("teamDetails",teamDetailsService.getDetailsAboutTeam(leagueId, teamsId));
         return "TeamDetails";
     }
+
+    @GetMapping()
+    public String getMainPage(){
+        return "MainPage";
+    }
 }
