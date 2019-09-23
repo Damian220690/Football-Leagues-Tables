@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Ultra&display=swap" rel="stylesheet">
     <link rel="stylesheet" th:href="@{/css/style.css}"/>
     <title>League Table</title>
 </head>
-<body th:style="'background:url(' + @{/images/footballPitch.jpg} + ');'">
+<body>
+<div id="mainDiv">
     <h2 th:text="${leagueTeams[0].leagueName}" id="leagueHeader"></h2>
-<div>
     <table class="table" id="leagueTable">
         <thead>
         <tr>
@@ -29,16 +30,16 @@
         </thead>
         <tbody>
             <tr th:each="footballTeam : ${leagueTeams}">
-                <td th:text="${footballTeam.leaguePosition}"></td>
-                <td th:text="${footballTeam.name}"></td>
-                <td th:text="${footballTeam.matchesPlayed}"></td>
-                <td th:text="${footballTeam.matchesWon}"></td>
-                <td th:text="${footballTeam.drawnMatches}"></td>
-                <td th:text="${footballTeam.matchesLost}"></td>
-                <td th:text="${footballTeam.goalsScored}"></td>
-                <td th:text="${footballTeam.goalsLost}"></td>
-                <td th:text="${footballTeam.goalsScored - footballTeam.goalsLost}"></td>
-                <td th:text="${footballTeam.leaguePoints}"></td>
+                <td th:text="${footballTeam.leaguePosition}" id="leaguePosition"></td>
+                <td th:text="${footballTeam.name}" id="teamName"></td>
+                <td th:text="${footballTeam.matchesPlayed}" id="matchesPlayed"></td>
+                <td th:text="${footballTeam.matchesWon}" id="matchesWon"></td>
+                <td th:text="${footballTeam.drawnMatches}" id="matchesDrawn"></td>
+                <td th:text="${footballTeam.matchesLost}" id="matchesLost"></td>
+                <td th:text="${footballTeam.goalsScored}" id="goalsScored"></td>
+                <td th:text="${footballTeam.goalsLost}" id="goalsLost"></td>
+                <td th:text="${footballTeam.goalsScored - footballTeam.goalsLost}" id="goalsDifference"></td>
+                <td th:text="${footballTeam.leaguePoints}" id="leaguePoints"></td>
                 <td><a th:href="@{/europeanLeagues/{leagueId}/teamsDetails/{teamId}(leagueId=${footballTeam.leagueId},teamId=${footballTeam.teamId})}">Team Details</a></td>
             </tr>
         </tbody>

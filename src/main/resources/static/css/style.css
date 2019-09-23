@@ -1,6 +1,13 @@
 
-#leagueTable{
+#leagueTable {
     text-align: center;
+    font-family: 'PT Serif Caption', serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+#leagueTable th{
+    color: #dae1e3;
+    font-size: 21px;
 }
 #leagueHeader{
     text-align: center;
@@ -8,7 +15,7 @@
 #teamHeader, #playersHeader, #coachesHeader, #coaches{
     text-align: center;
 }
-#teamHeader{
+#teamHeader, #leagueHeader{
     font-family: 'Ultra', serif;
 }
 #playersHeader{
@@ -23,7 +30,7 @@
     width:70%;
     border-collapse: collapse;
     font-family: 'PT Serif Caption', serif;
-    color: #420f07;
+    color: #31b9f7;
 }
 #playersTable th{
     color: #120323;
@@ -50,4 +57,34 @@
 .enabledAdditionalInfo{
     display: inline;
     font-size: 13px;
+}
+#leaguePosition{
+    color: #a6550c;
+}
+#teamName{
+    color: #a68a0c;
+}
+#matchesPlayed{
+    color: #0f5d91;
+}
+#matchesWon{
+    color: #97e6f7
+}
+#matchesDrawn{
+    color: #827e85;
+}
+#matchesLost{
+    color: #870b1b;
+}
+#goalsScored{
+    color: #096b54;
+}
+#goalsLost{
+    color: #803030;
+}
+#goalsDifference{
+    color: #8a0c81;
+}
+#leaguePoints{
+    color: #081b54;
 }
