@@ -9,8 +9,33 @@
     <title>Football Leagues</title>
 </head>
 <body th:style="'background:url(' + @{/images/footballPitch.jpg} + ');'">
+<ul>
+    <li><img th:src="@{/images/poland.png}"></li>
     <ul>
         <li><a th:href="@{/europeanLeagues/381/leagueTable}">Ekstraklasa</a></li>
+        <li><a th:href="@{/europeanLeagues/382/leagueTable}">Division 1</a></li>
     </ul>
+    <li><img th:src="@{/images/france.png}"></li>
+    <ul>
+        <li><a th:href="@{/europeanLeagues/176/leagueTable}">Ligue 1</a></li>
+        <li><a th:href="@{/europeanLeagues/177/leagueTable}">Ligue 2</a></li>
+    </ul>
+    <li><img th:src="@{/images/germany.png}"></li>
+    <ul>
+        <li><a th:href="@{/europeanLeagues/195/leagueTable}">Bundesliga</a></li>
+        <li><a th:href="@{/europeanLeagues/196/leagueTable}">Bundesliga 2 2</a></li>
+    </ul>
+    <li><img th:src="@{/images/italy.png}"></li>
+    <ul>
+        <li><a th:href="@{/europeanLeagues/262/leagueTable}">Seria A</a></li>
+        <li><a th:href="@{/europeanLeagues/263/leagueTable}">Seria B</a></li>
+    </ul>
+    <li><img th:src="@{/images/spain.png}"></li>
+    <ul>
+        <li><a th:href="@{/europeanLeagues/468/leagueTable}">La Liga</a></li>
+        <li><a th:href="@{/europeanLeagues/469/leagueTable}">La Liga2</a></li>
+    </ul>
+
+</ul>
 </body>
 </html>
