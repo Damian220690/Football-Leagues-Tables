@@ -5,94 +5,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"
+          media="screen"/>
+    <link href="https://fonts.googleapis.com/css?family=Ultra&display=swap" rel="stylesheet">
     <link rel="stylesheet" th:href="@{/css/style.css}"/>
     <title>Football Leagues</title>
 </head>
 <body th:style="'background:url(' + @{/images/footballPitch.jpg} + ');'">
-<ul>
-    <li><img th:src="@{/images/poland.png}"></li>
-    <ul>
-        <li><a th:href="@{/europeanLeagues/381/leagueTable}">Ekstraklasa</a></li>
-        <li><a th:href="@{/europeanLeagues/382/leagueTable}">Division 1</a></li>
-    </ul>
-    <li><img th:src="@{/images/france.png}"></li>
-    <ul>
-        <li><a th:href="@{/europeanLeagues/176/leagueTable}">Ligue 1</a></li>
-        <li><a th:href="@{/europeanLeagues/177/leagueTable}">Ligue 2</a></li>
-    </ul>
-    <li><img th:src="@{/images/germany.png}"></li>
-    <ul>
-        <li><a th:href="@{/europeanLeagues/195/leagueTable}">Bundesliga</a></li>
-        <li><a th:href="@{/europeanLeagues/196/leagueTable}">Bundesliga 2 2</a></li>
-    </ul>
-    <li><img th:src="@{/images/italy.png}"></li>
-    <ul>
-        <li><a th:href="@{/europeanLeagues/262/leagueTable}">Seria A</a></li>
-        <li><a th:href="@{/europeanLeagues/263/leagueTable}">Seria B</a></li>
-    </ul>
-    <li><img th:src="@{/images/spain.png}"></li>
-    <ul>
-        <li><a th:href="@{/europeanLeagues/468/leagueTable}">La Liga</a></li>
-        <li><a th:href="@{/europeanLeagues/469/leagueTable}">La Liga2</a></li>
-    </ul>
-    <li><img th:src="@{/images/netherlands.png}"></li>
-    <ul>
-        <li><a th:href="@{/europeanLeagues/343/leagueTable}">Eredivisie</a></li>
-        <li><a th:href="@{/europeanLeagues/344/leagueTable}">Eerste Divisie</a></li>
-    </ul>
-    <li><img th:src="@{/images/russia.png}"></li>
-    <ul>
-        <li><a th:href="@{/europeanLeagues/407/leagueTable}">Premier League</a></li>
-    </ul>
-    <li><img th:src="@{/images/portugal.png}"></li>
-    <ul>
-        <li><a th:href="@{/europeanLeagues/391/leagueTable}">Primeira Liga</a></li>
-        <li><a th:href="@{/europeanLeagues/392/leagueTable}">LigaPro</a></li>
-    </ul>
-    <li><img th:src="@{/images/belgium.png}"></li>
-    <ul>
-        <li><a th:href="@{/europeanLeagues/51/leagueTable}">Jupiler League</a></li>
-    </ul>
-    <li><img th:src="@{/images/ukraine.png}"></li>
-    <ul>
-        <li><a th:href="@{/europeanLeagues/51/leagueTable}">Premier League</a></li>
-    </ul>
-    <li><img th:src="@{/images/turkey.png}"></li>
-    <ul>
-        <li><a th:href="@{/europeanLeagues/511/leagueTable}">Super Lig</a></li>
-    </ul>
-    <li><img th:src="@{/images/austria.png}"></li>
-    <ul>
-        <li><a th:href="@{/europeanLeagues/33/leagueTable}">Tipico Bundesliga</a></li>
-    </ul>
-    <li><img th:src="@{/images/czechRepublic.png}"></li>
-    <ul>
-        <li><a th:href="@{/europeanLeagues/120/leagueTable}">1. Liga</a></li>
-    </ul>
-    <li><img th:src="@{/images/denmark.png}"></li>
-    <ul>
-        <li><a th:href="@{/europeanLeagues/130/leagueTable}">Superliga</a></li>
-    </ul>
-    <li><img th:src="@{/images/greece.png}"></li>
-    <ul>
-        <li><a th:href="@{/europeanLeagues/209/leagueTable}">Super League</a></li>
-    </ul>
-    <li><img th:src="@{/images/cyprus.png}"></li>
-    <ul>
-        <li><a th:href="@{/europeanLeagues/114/leagueTable}">First Division</a></li>
-    </ul>
-    <li><img th:src="@{/images/croatia.png}"></li>
-    <ul>
-        <li><a th:href="@{/europeanLeagues/110/leagueTable}">1. HNL</a></li>
-    </ul>
-    <li><img th:src="@{/images/serbia.png}"></li>
-    <ul>
-        <li><a th:href="@{/europeanLeagues/434/leagueTable}">Super Liga</a></li>
-    </ul>
-    <li><img th:src="@{/images/scotland.png}"></li>
-    <ul>
-        <li><a th:href="@{/europeanLeagues/423/leagueTable}">Premiership</a></li>
-    </ul>
-</ul>
+<h2 id="mainHeader">The best football leagues in Europe</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-5" id="firstColumn">
+            <ul>
+                <li class="flagItem"><img th:src="@{/images/poland.png}"></li>
+                <ul>
+                    <li><a th:href="@{/europeanLeagues/381/leagueTable}">Ekstraklasa</a></li>
+                    <li><a th:href="@{/europeanLeagues/382/leagueTable}">Division 1</a></li>
+                </ul>
+                <li class="flagItem"><img th:src="@{/images/france.png}"></li>
+                <ul>
+                    <li><a th:href="@{/europeanLeagues/176/leagueTable}">Ligue 1</a></li>
+                    <li><a th:href="@{/europeanLeagues/177/leagueTable}">Ligue 2</a></li>
+                </ul>
+                <li class="flagItem"><img th:src="@{/images/germany.png}"></li>
+                <ul>
+                    <li><a th:href="@{/europeanLeagues/195/leagueTable}">Bundesliga</a></li>
+                    <li><a th:href="@{/europeanLeagues/196/leagueTable}">Bundesliga 2</a></li>
+                </ul>
+                <li class="flagItem"><img th:src="@{/images/italy.png}"></li>
+                <ul>
+                    <li><a th:href="@{/europeanLeagues/262/leagueTable}">Seria A</a></li>
+                    <li><a th:href="@{/europeanLeagues/263/leagueTable}">Seria B</a></li>
+                </ul>
+                <li class="flagItem"><img th:src="@{/images/spain.png}"></li>
+                <ul>
+                    <li><a th:href="@{/europeanLeagues/468/leagueTable}">La Liga</a></li>
+                    <li><a th:href="@{/europeanLeagues/469/leagueTable}">La Liga2</a></li>
+                </ul>
+                <li class="flagItem"><img th:src="@{/images/netherlands.png}"></li>
+                <ul>
+                    <li><a th:href="@{/europeanLeagues/343/leagueTable}">Eredivisie</a></li>
+                    <li><a th:href="@{/europeanLeagues/344/leagueTable}">Eerste Divisie</a></li>
+                </ul>
+                <li class="flagItem"><img th:src="@{/images/russia.png}"></li>
+                <ul>
+                    <li><a th:href="@{/europeanLeagues/407/leagueTable}">Premier League</a></li>
+                </ul>
+                <li class="flagItem"><img th:src="@{/images/portugal.png}"></li>
+                <ul>
+                    <li><a th:href="@{/europeanLeagues/391/leagueTable}">Primeira Liga</a></li>
+                    <li><a th:href="@{/europeanLeagues/392/leagueTable}">LigaPro</a></li>
+                </ul>
+            </ul>
+        </div>
+        <div id="secondColumn" class="col-6">
+            <ul>
+                <li class="flagItem"><img th:src="@{/images/belgium.png}"></li>
+                <ul>
+                    <li><a th:href="@{/europeanLeagues/51/leagueTable}">Jupiler League</a></li>
+                </ul>
+                <li class="flagItem"><img th:src="@{/images/ukraine.png}"></li>
+                <ul>
+                    <li><a th:href="@{/europeanLeagues/51/leagueTable}">Premier League</a></li>
+                </ul>
+                <li class="flagItem"><img th:src="@{/images/turkey.png}"></li>
+                <ul>
+                    <li><a th:href="@{/europeanLeagues/511/leagueTable}">Super Lig</a></li>
+                </ul>
+                <li class="flagItem"><img th:src="@{/images/austria.png}"></li>
+                <ul>
+                    <li><a th:href="@{/europeanLeagues/33/leagueTable}">Tipico Bundesliga</a></li>
+                </ul>
+                <li class="flagItem"><img th:src="@{/images/czechRepublic.png}"></li>
+                <ul>
+                    <li><a th:href="@{/europeanLeagues/120/leagueTable}">1. Liga</a></li>
+                </ul>
+                <li class="flagItem"><img th:src="@{/images/denmark.png}"></li>
+                <ul>
+                    <li><a th:href="@{/europeanLeagues/130/leagueTable}">Superliga</a></li>
+                </ul>
+                <li class="flagItem"><img th:src="@{/images/greece.png}"></li>
+                <ul>
+                    <li><a th:href="@{/europeanLeagues/209/leagueTable}">Super League</a></li>
+                </ul>
+                <li class="flagItem"><img th:src="@{/images/cyprus.png}"></li>
+                <ul>
+                    <li><a th:href="@{/europeanLeagues/114/leagueTable}">First Division</a></li>
+                </ul>
+                <li class="flagItem"><img th:src="@{/images/croatia.png}"></li>
+                <ul>
+                    <li><a th:href="@{/europeanLeagues/110/leagueTable}">1. HNL</a></li>
+                </ul>
+                <li class="flagItem"><img th:src="@{/images/serbia.png}"></li>
+                <ul>
+                    <li><a th:href="@{/europeanLeagues/434/leagueTable}">Super Liga</a></li>
+                </ul>
+                <li class="flagItem"><img th:src="@{/images/scotland.png}"></li>
+                <ul>
+                    <li><a th:href="@{/europeanLeagues/423/leagueTable}">Premiership</a></li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 </html>

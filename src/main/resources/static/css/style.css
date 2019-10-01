@@ -12,10 +12,10 @@
 #leagueHeader{
     text-align: center;
 }
-#teamHeader, #playersHeader, #coachesHeader, #coaches{
+#teamHeader, #playersHeader, #coachesHeader, #coaches, #mainHeader{
     text-align: center;
 }
-#teamHeader, #leagueHeader{
+#teamHeader, #leagueHeader, #mainHeader{
     font-family: 'Ultra', serif;
 }
 #playersHeader{
@@ -88,3 +88,15 @@
 #leaguePoints{
     color: #081b54;
 }
+.container{
+    padding-top: 10px;
+    float: right;
+    font-size: 22px;
+}
+.flagItem{
+    list-style-type: none;
+}
+#secondColumn{
+    padding-left: 200px;
+}
+
