@@ -29,19 +29,21 @@
         </tr>
         </thead>
         <tbody>
-            <tr th:each="footballTeam : ${leagueTeams}">
-                <td th:text="${footballTeam.leaguePosition}" id="leaguePosition"></td>
-                <td th:text="${footballTeam.name}" id="teamName"></td>
-                <td th:text="${footballTeam.matchesPlayed}" id="matchesPlayed"></td>
-                <td th:text="${footballTeam.matchesWon}" id="matchesWon"></td>
-                <td th:text="${footballTeam.drawnMatches}" id="matchesDrawn"></td>
-                <td th:text="${footballTeam.matchesLost}" id="matchesLost"></td>
-                <td th:text="${footballTeam.goalsScored}" id="goalsScored"></td>
-                <td th:text="${footballTeam.goalsLost}" id="goalsLost"></td>
-                <td th:text="${footballTeam.goalsScored - footballTeam.goalsLost}" id="goalsDifference"></td>
-                <td th:text="${footballTeam.leaguePoints}" id="leaguePoints"></td>
-                <td><a th:href="@{/europeanLeagues/{leagueId}/teamsDetails/{teamId}(leagueId=${footballTeam.leagueId},teamId=${footballTeam.teamId})}">Team Details</a></td>
-            </tr>
+        <tr th:each="footballTeam : ${leagueTeams}">
+            <td th:text="${footballTeam.leaguePosition}" id="leaguePosition"></td>
+            <td th:text="${footballTeam.name}" id="teamName"></td>
+            <td th:text="${footballTeam.matchesPlayed}" id="matchesPlayed"></td>
+            <td th:text="${footballTeam.matchesWon}" id="matchesWon"></td>
+            <td th:text="${footballTeam.drawnMatches}" id="matchesDrawn"></td>
+            <td th:text="${footballTeam.matchesLost}" id="matchesLost"></td>
+            <td th:text="${footballTeam.goalsScored}" id="goalsScored"></td>
+            <td th:text="${footballTeam.goalsLost}" id="goalsLost"></td>
+            <td th:text="${footballTeam.goalsScored - footballTeam.goalsLost}" id="goalsDifference"></td>
+            <td th:text="${footballTeam.leaguePoints}" id="leaguePoints"></td>
+            <td>
+                <a th:href="@{/europeanLeagues/{leagueId}/teamsDetails/{teamId}(leagueId=${footballTeam.leagueId},teamId=${footballTeam.teamId})}">Team
+                    Details</a></td>
+        </tr>
         </tbody>
     </table>
 </div>
